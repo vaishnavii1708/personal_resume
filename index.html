@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vaishnavi Sharma - Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    :root {
+      --primary-gradient: linear-gradient(to right, #c5dff8, #ffffff);
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --text-color: #1a1a1a;
+      --card-radius: 16px;
+      --card-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--primary-gradient);
+      color: var(--text-color);
+      line-height: 1.6;
+      padding: 0 1rem;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.2rem 2rem;
+      background: white;
+      box-shadow: var(--card-shadow);
+      border-radius: var(--card-radius);
+      margin: 1rem auto;
+      max-width: 1100px;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 1.5rem;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links li a:hover {
+      color: #0077cc;
+    }
+
+    .hero {
+      text-align: center;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    section {
+      max-width: 900px;
+      margin: 3rem auto;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    p {
+      margin-bottom: 1rem;
+    }
+
+    .scrollable-section ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+    }
+
+    .scrollable-section, .card-container {
+      background: var(--card-bg);
+      padding: 1.5rem;
+      border-radius: var(--card-radius);
+      box-shadow: var(--card-shadow);
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: var(--card-radius);
+      padding: 1rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    footer {
+      text-align: center;
+      margin: 3rem auto 1rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="logo">Vaishnavi Sharma</div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div class="hero">
+      <h2>I’m <span class="typewriter-text"></span></h2>
+    </div>
+  </header>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m Vaishnavi Sharma, a curious mind driven by the dynamic world of the stock market and entrepreneurship. With a strong belief in learning by doing, I’ve built stuff ranging from gaming websites to algorithmic indicators. I enjoy blending creativity and logic to bring ideas to life, especially in finance, web, and AI-based tools. My long-term goal? Build impactful products and businesses that redefine possibilities.</p>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+    <div class="scrollable-section">
+      <ul>
+        <li><strong>The Khaitan School, Noida</strong> – 2009 to 2023</li>
+        <li><strong>Delhi University</strong> – BMS (2024–2024)</li>
+        <li><strong>IIM Bangalore</strong> – BBADBE (2024–2027)</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="card-container">
+      <div class="card">
+        <h3>Locogames</h3>
+        <p>Created a website that hosted multiple online games for users to play — a playground for fun and web experimentation.</p>
+      </div>
+      <div class="card">
+        <h3>Brick Breaker</h3>
+        <p>Built a classic Brick Breaker replica using Scratch as an early dive into the logic of game development.</p>
+      </div>
+      <div class="card">
+        <h3>AI Indicators</h3>
+        <p>Currently developing AI-powered indicators for TradingView to assist with technical analysis and smarter trading.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:vaishnavi.sharma24@iimb.ac.in">vaishnavi.sharma24@iimb.ac.in</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/vaishnavi-sharma-271010308/" target="_blank">linkedin.com/in/vaishnavi-sharma</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Vaishnavi Sharma. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const text = ["a Fashion Enthusiast.", "an Entrepreneur."];
+    let index = 0, charIndex = 0;
+    const el = document.querySelector(".typewriter-text");
+    function typeWriter() {
+      if (charIndex < text[index].length) {
+        el.innerHTML += text[index].charAt(charIndex++);
+        setTimeout(typeWriter, 100);
+      } else {
+        setTimeout(() => { el.innerHTML = ""; charIndex = 0; index = (index + 1) % text.length; typeWriter(); }, 1500);
+      }
+    }
+    document.addEventListener("DOMContentLoaded", typeWriter);
+  </script>
+</body>
+</html>
